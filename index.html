@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Resort Booking</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div><b>StayFlow</b><span> Resort Booking</span></div><button onclick="openForm()">+ New booking</button></header>
+<section class="stats"><div><small>Bookings</small><strong id="count">0</strong></div><div><small>Confirmed</small><strong id="confirmed">0</strong></div><div><small>Revenue</small><strong id="revenue">₹0</strong></div></section>
+<div class="toolbar"><button onclick="shift(-1)">‹</button><h2 id="month"></h2><button onclick="shift(1)">›</button><input id="search" placeholder="Search guest..." oninput="render()"></div>
+<div id="calendar"></div>
+<div id="modal" class="modal hidden"><div class="sheet"><h2 id="formTitle">New booking</h2><input id="guest" placeholder="Guest name"><input id="room" placeholder="Villa / room"><label>Check-in<input id="checkin" type="date"></label><label>Check-out<input id="checkout" type="date"></label><input id="amount" type="number" placeholder="Amount (₹)"><select id="status"><option>Confirmed</option><option>Pending</option><option>Checked-in</option><option>Blocked</option></select><div class="actions"><button onclick="closeForm()">Cancel</button><button class="primary" onclick="saveBooking()">Save</button></div></div></div>
+<script src="app.js"></script></body></html>
